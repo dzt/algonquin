@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dzt/algonquin/issues"
   },
-  "homepage": "https://github.com/dzt/algonquin#readme"
+  "homepage": "https://github.com/dzt/algonquin#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "remove-whitespace": "^1.1.0"
+  }
 }
