@@ -30,9 +30,7 @@ class Summary {
         courses = [Course]()
         if let courses = json["courses"].array {
             for course in courses {
-                if let course = Course(json: course) {
-                   self.courses.append(course)
-                }
+                self.courses.append(Course(json: course))
             }
         }
         
