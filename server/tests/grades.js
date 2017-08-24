@@ -16,18 +16,21 @@ fs.readFile('grades.html', function(err, html) {
     console.log('Loaded grades.html file');
 
     var stdID = removeWhitespace($('.blueHBoldMed').text()).split('ID: ')[1];
+    var photo = null
+
+    if ($('#kidphoto').attr('src').indexOf('http') > -1) {
+      photo = $('#kidphoto').attr('src');
+    }
 
     var data = {
       id: stdID,
       student: removeWhitespace($('.blueHBoldMed').text()).split('Student:')[1].split(`ID: ${stdID}`)[0].trim(),
-      grade: '',
-      counselor: '',
-      yog: '',
-      photo: '',
-      grades: {
-        year: '',
-        results: []
-      }
+      grade: removeWhitespace($('.Datal').eq(1).text()).trim(),
+      counselor: removeWhitespace($('.Datal').eq(2).text()).trim(),
+      yog: removeWhitespace($('.Datal').eq(3).text()).trim(),
+      photo: photo,
+      gradesYear: '',
+      courses: []
     };
 
     cheerio.load(tbody)('tr').each(function(i, element) {
@@ -42,7 +45,7 @@ fs.readFile('grades.html', function(err, html) {
         teacher: teacher
       };
       if (course.id != 'Course') {
-        data.grades.results.push(course);
+        data.courses.push(course);
       };
     });
 

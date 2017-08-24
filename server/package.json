@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/dzt/algonquin#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.4",
     "remove-whitespace": "^1.1.0"
   }
 }

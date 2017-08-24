@@ -1,0 +1,6 @@
+framework module Pods_Algonquin {
+  umbrella header "Pods-Algonquin-umbrella.h"
+
+  export *
+  module * { export * }
+}
