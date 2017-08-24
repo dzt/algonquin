@@ -1,26 +1,185 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4qn-75-QTE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Courses-->
+        <scene sceneID="mME-ab-46n">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="D2p-l7-DSQ" customClass="CoursesTableViewController" customModule="Algonquin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Hr-mN-zz4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="t5k-cS-IYT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blur" translatesAutoresizingMaskIntoConstraints="NO" id="4td-sD-jvO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter Soboyejo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8su-cb-aJG">
+                                    <rect key="frame" x="87" y="13" width="259" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="259" id="iA8-tJ-npP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Algonquin Regional High School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hs-c5-k3e">
+                                    <rect key="frame" x="86" y="31" width="259" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="259" id="irE-Le-3fJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#14752 - Grade 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shm-6I-RoX">
+                                    <rect key="frame" x="88" y="49" width="259" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="259" id="j1n-Bz-grB"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="11"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avi" translatesAutoresizingMaskIntoConstraints="NO" id="cdI-yT-se5">
+                                    <rect key="frame" x="26" y="21" width="45" height="45"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="0hs-c5-k3e" firstAttribute="leading" secondItem="cdI-yT-se5" secondAttribute="trailing" constant="15" id="0rx-lF-4RC"/>
+                                <constraint firstAttribute="trailing" secondItem="4td-sD-jvO" secondAttribute="trailing" id="8u2-lR-VIR"/>
+                                <constraint firstAttribute="bottom" secondItem="shm-6I-RoX" secondAttribute="bottom" constant="14" id="DC9-DI-sgZ"/>
+                                <constraint firstItem="8su-cb-aJG" firstAttribute="top" secondItem="t5k-cS-IYT" secondAttribute="topMargin" constant="5" id="DvP-A5-8hQ"/>
+                                <constraint firstItem="0hs-c5-k3e" firstAttribute="top" secondItem="8su-cb-aJG" secondAttribute="bottom" constant="-3" id="Gfh-VW-eyz"/>
+                                <constraint firstAttribute="bottom" secondItem="8su-cb-aJG" secondAttribute="bottom" constant="53" id="HD9-wn-hqM"/>
+                                <constraint firstAttribute="bottom" secondItem="4td-sD-jvO" secondAttribute="bottom" id="Msw-QJ-tDF"/>
+                                <constraint firstItem="cdI-yT-se5" firstAttribute="centerY" secondItem="0hs-c5-k3e" secondAttribute="centerY" id="RAf-UD-zzg"/>
+                                <constraint firstAttribute="trailing" secondItem="8su-cb-aJG" secondAttribute="trailing" constant="29" id="XSd-91-ZYN"/>
+                                <constraint firstItem="cdI-yT-se5" firstAttribute="leading" secondItem="t5k-cS-IYT" secondAttribute="leading" constant="26" id="fRP-7A-tZa"/>
+                                <constraint firstAttribute="bottom" secondItem="0hs-c5-k3e" secondAttribute="bottom" constant="32" id="ft3-nJ-u20"/>
+                                <constraint firstItem="shm-6I-RoX" firstAttribute="leading" secondItem="cdI-yT-se5" secondAttribute="trailing" constant="17" id="iXS-yf-p3Y"/>
+                                <constraint firstItem="shm-6I-RoX" firstAttribute="top" secondItem="8su-cb-aJG" secondAttribute="bottom" constant="15" id="lAr-Oi-H66"/>
+                                <constraint firstItem="4td-sD-jvO" firstAttribute="top" secondItem="t5k-cS-IYT" secondAttribute="top" id="nVS-1c-QII"/>
+                                <constraint firstItem="4td-sD-jvO" firstAttribute="leading" secondItem="t5k-cS-IYT" secondAttribute="leading" id="rxm-61-68d"/>
+                                <constraint firstItem="0hs-c5-k3e" firstAttribute="leading" secondItem="8su-cb-aJG" secondAttribute="leading" constant="-1" id="t64-y6-khN"/>
+                                <constraint firstItem="cdI-yT-se5" firstAttribute="top" secondItem="t5k-cS-IYT" secondAttribute="top" constant="21" id="uee-1g-cOp"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="CourseCell" rowHeight="95" id="wyM-AW-2Uf" customClass="CoursesTableViewCell" customModule="Algonquin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="115" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wyM-AW-2Uf" id="c6e-ad-tSa">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="94.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AP Computer Science A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oQ-KG-Fwr">
+                                            <rect key="frame" x="8" y="24" width="231" height="27"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr. Forhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-Q5-esG">
+                                            <rect key="frame" x="8" y="54" width="152" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="152" id="bU5-Vq-j9S"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="9"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8oQ-KG-Fwr" firstAttribute="top" secondItem="c6e-ad-tSa" secondAttribute="topMargin" constant="16" id="3WC-Ne-HTB"/>
+                                        <constraint firstItem="OZc-Q5-esG" firstAttribute="leading" secondItem="8oQ-KG-Fwr" secondAttribute="leading" id="WGd-dP-yya"/>
+                                        <constraint firstItem="OZc-Q5-esG" firstAttribute="top" secondItem="8oQ-KG-Fwr" secondAttribute="bottom" constant="3" id="crN-Fp-oB0"/>
+                                        <constraint firstItem="8oQ-KG-Fwr" firstAttribute="centerY" secondItem="c6e-ad-tSa" secondAttribute="centerY" constant="-9.75" id="hyY-K7-vsW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8oQ-KG-Fwr" secondAttribute="trailing" constant="95" id="tvM-BU-sr4"/>
+                                        <constraint firstItem="8oQ-KG-Fwr" firstAttribute="leading" secondItem="c6e-ad-tSa" secondAttribute="leadingMargin" id="xoT-yZ-NAB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OZc-Q5-esG" secondAttribute="bottom" constant="16.5" id="yEH-NT-qzd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="className" destination="8oQ-KG-Fwr" id="Nfw-RG-PP9"/>
+                                    <outlet property="teacher" destination="OZc-Q5-esG" id="Sb4-a2-RpE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D2p-l7-DSQ" id="4Mk-Me-a2k"/>
+                            <outlet property="delegate" destination="D2p-l7-DSQ" id="VAQ-Y7-wmC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Courses" id="zNo-ch-6Hi"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6Ze-ER-fjd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOb-YU-K8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1276" y="-90.404797601199405"/>
+        </scene>
+        <!--Courses-->
+        <scene sceneID="qRb-PO-2nl">
+            <objects>
+                <navigationController id="DUA-gA-kEm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Courses" image="icon-home" id="goz-6d-uTE">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1fq-Bk-etz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D2p-l7-DSQ" kind="relationship" relationship="rootViewController" id="VOF-du-UFF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUq-eD-UZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-90"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JcI-zf-QQl">
+            <objects>
+                <tabBarController id="4qn-75-QTE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nDl-Dn-jwE"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Rb5-o4-Osv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DUA-gA-kEm" kind="relationship" relationship="viewControllers" id="CEQ-BM-hZB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j38-eD-MoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="-90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avi" width="437" height="437"/>
+        <image name="blur" width="1280" height="720"/>
+        <image name="icon-home" width="24" height="24"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

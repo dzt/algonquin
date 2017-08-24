@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3F431BC1E7353069D973898B /* Pods_Algonquin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EE74CAB029109A07417E17 /* Pods_Algonquin.framework */; };
+		D0B434E31F4E8AE400393ACE /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */; };
+		D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */; };
+		D0B434E71F4E8F9700393ACE /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E61F4E8F9700393ACE /* Client.swift */; };
 		D0CC6CA51F4E248D00D43AA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CA41F4E248D00D43AA8 /* AppDelegate.swift */; };
-		D0CC6CA71F4E248D00D43AA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CA61F4E248D00D43AA8 /* ViewController.swift */; };
 		D0CC6CAA1F4E248D00D43AA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CC6CA81F4E248D00D43AA8 /* Main.storyboard */; };
 		D0CC6CAC1F4E248D00D43AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0CC6CAB1F4E248D00D43AA8 /* Assets.xcassets */; };
 		D0CC6CAF1F4E248D00D43AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CC6CAD1F4E248D00D43AA8 /* LaunchScreen.storyboard */; };
 		D0CC6CB81F4E262900D43AA8 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CB71F4E262900D43AA8 /* Summary.swift */; };
 		D0CC6CBA1F4E289500D43AA8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CB91F4E289500D43AA8 /* Course.swift */; };
 		D0CC6CBD1F4E594F00D43AA8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CBC1F4E594F00D43AA8 /* Request.swift */; };
-		D0CC6CBF1F4E5A0D00D43AA8 /* iPassRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CBE1F4E5A0D00D43AA8 /* iPassRoutes.swift */; };
 		D0CC6CC11F4E5A1B00D43AA8 /* ParserRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CC01F4E5A1B00D43AA8 /* ParserRoutes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5474BBE69EF73B89BD3E689E /* Pods-Algonquin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonquin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin.release.xcconfig"; sourceTree = "<group>"; };
+		D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		D0B434E61F4E8F9700393ACE /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		D0CC6CA11F4E248D00D43AA8 /* Algonquin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algonquin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CC6CA41F4E248D00D43AA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0CC6CA61F4E248D00D43AA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0CC6CA91F4E248D00D43AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0CC6CAB1F4E248D00D43AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0CC6CAE1F4E248D00D43AA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,7 +35,6 @@
 		D0CC6CB71F4E262900D43AA8 /* Summary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		D0CC6CB91F4E289500D43AA8 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		D0CC6CBC1F4E594F00D43AA8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		D0CC6CBE1F4E5A0D00D43AA8 /* iPassRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPassRoutes.swift; sourceTree = "<group>"; };
 		D0CC6CC01F4E5A1B00D43AA8 /* ParserRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserRoutes.swift; sourceTree = "<group>"; };
 		E6EE74CAB029109A07417E17 /* Pods_Algonquin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algonquin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9152AF7EA69329883C7D229 /* Pods-Algonquin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonquin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D0B434E01F4E8ABE00393ACE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D0B434E11F4E8AD000393ACE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D0CC6C981F4E248D00D43AA8 = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +106,11 @@
 		D0CC6CA31F4E248D00D43AA8 /* Algonquin */ = {
 			isa = PBXGroup;
 			children = (
+				D0B434E11F4E8AD000393ACE /* Views */,
+				D0B434E01F4E8ABE00393ACE /* View Controllers */,
 				D0CC6CBB1F4E593200D43AA8 /* Networking */,
 				D0CC6CB61F4E24F900D43AA8 /* Models */,
 				D0CC6CA41F4E248D00D43AA8 /* AppDelegate.swift */,
-				D0CC6CA61F4E248D00D43AA8 /* ViewController.swift */,
 				D0CC6CA81F4E248D00D43AA8 /* Main.storyboard */,
 				D0CC6CAB1F4E248D00D43AA8 /* Assets.xcassets */,
 				D0CC6CAD1F4E248D00D43AA8 /* LaunchScreen.storyboard */,
@@ -113,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				D0CC6CBC1F4E594F00D43AA8 /* Request.swift */,
-				D0CC6CBE1F4E5A0D00D43AA8 /* iPassRoutes.swift */,
 				D0CC6CC01F4E5A1B00D43AA8 /* ParserRoutes.swift */,
+				D0B434E61F4E8F9700393ACE /* Client.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -244,12 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CC6CBA1F4E289500D43AA8 /* Course.swift in Sources */,
-				D0CC6CA71F4E248D00D43AA8 /* ViewController.swift in Sources */,
-				D0CC6CBF1F4E5A0D00D43AA8 /* iPassRoutes.swift in Sources */,
 				D0CC6CBD1F4E594F00D43AA8 /* Request.swift in Sources */,
+				D0B434E31F4E8AE400393ACE /* CoursesTableViewController.swift in Sources */,
+				D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */,
 				D0CC6CB81F4E262900D43AA8 /* Summary.swift in Sources */,
 				D0CC6CA51F4E248D00D43AA8 /* AppDelegate.swift in Sources */,
 				D0CC6CC11F4E5A1B00D43AA8 /* ParserRoutes.swift in Sources */,
+				D0B434E71F4E8F9700393ACE /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

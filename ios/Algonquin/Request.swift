@@ -13,7 +13,8 @@ import SwiftyJSON
 
 class Request {
     
-    private static var baseURL = "http://localhost:1337"
+    //private static var baseURL = "http://localhost:3000"
+    private static var baseURL = "http://gonk.herokuapp.com"
     
     class func request(_ endpoint: String, requestType: String = "GET", headers: [String: String] = [String: String](), params: [String: String] = [String: String](), body: Any? = nil, completion: ((_ json: JSON?, _ error: String?) -> Void)?) {
         Request.dataRequest("\(baseURL)\(endpoint)", requestType: requestType, headers: headers, params: params, body: body) { (data, error) in
@@ -42,7 +43,7 @@ class Request {
                 request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
             } catch {
-                completion?(nil, "An unknown error occurred")
+                completion?(nil, "An unknown error occurred 1")
                 return
             }
         }
@@ -53,7 +54,7 @@ class Request {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let response = response as? HTTPURLResponse, let data = data else {
-                completion?(nil, "Unknown Error has Occured")
+                completion?(nil, "Unknown Error has Occured 2")
                 return
             }
             
@@ -66,21 +67,21 @@ class Request {
                 default: break
                 }
                 
-                completion?(nil, "An Error has occured")
+                completion?(nil, "An Error has occured 3")
             } else if response.statusCode != 200 && response.statusCode != 204 {
                 switch response.statusCode {
                 case 400:
                     if let message = json["message"].string {
                         requestError = message
                     } else {
-                        requestError = "An unknown error occurred."
+                        requestError = "An unknown error occurred. 4"
                     }
                 case 401: requestError = "Unauthorized"
                 case 403: requestError = "Access Denied"
                 case 404: requestError = "Not Found"
                 default:
                     print("Unknown status code: \(response.statusCode)")
-                    requestError = "Unknown Error has Occured"
+                    requestError = "Unknown Error has Occured 5"
                 }
                 
                 completion?(data, requestError)

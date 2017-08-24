@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import UIKit
+
+
+class CoursesTableViewCell : UITableViewCell
+{
+    
+    @IBOutlet weak var className: UILabel!
+    @IBOutlet weak var teacher: UILabel!
+    
+    var course: Course! {
+        didSet {
+            self.setNeedsLayout()
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
+        className.text = course.name
+        teacher.text = course.teacher
+    }
+    
+    
+}
+

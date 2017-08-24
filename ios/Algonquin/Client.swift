@@ -6,4 +6,18 @@
 //  Copyright © 2017 Peter Soboyejo. All rights reserved.
 //
 
-import Foundation
+class Client {
+    
+    public class var shared: Client {
+        struct Static {
+            static let instance = Client()
+        }
+        return Static.instance
+    }
+    
+    public let parser: ParserRoutes
+    
+    private init() {
+        parser = ParserRoutes()
+    }
+}
