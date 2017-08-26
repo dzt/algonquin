@@ -12,21 +12,17 @@ import SwiftyJSON
 class ParserRoutes {
     
     func getSummary(completion: ((_ summary: Summary?, _ error: String?) -> Void)?) {
-        
         var params = [String: String]()
-        
         let body = [
             "userid": "xxx",
             "password": "xxx"
         ] as [String: Any]
         
-        Request.request("/api/grades", requestType: "POST", body: body) { json, error in
+        Request.request("/api/courses", requestType: "POST", body: body) { json, error in
             guard let courses = json?["courses"].array else {
                 completion?(nil, error)
                 return
             }
-            print("Summary")
-            print(Summary(json: json!))
             completion?(Summary(json: json!), error)
         }
     }

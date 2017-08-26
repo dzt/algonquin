@@ -48,7 +48,7 @@ class CoursesTableViewController: UITableViewController {
                 self.courses = [Course]()
                 self.tableView.reloadData()
                 self.errorLabel.alpha = 1
-                self.errorLabel.text = "There was an issue retrieving your orders. Please try again later."
+                self.errorLabel.text = "There was an issue retrieving your courses. Please try again later."
                 self.activityIndicator.stopAnimating()
                 self.view.setNeedsLayout()
                 self.view.layoutIfNeeded()
