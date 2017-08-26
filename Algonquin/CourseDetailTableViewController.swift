@@ -17,6 +17,8 @@ class CourseDetailTableViewController : UITableViewController {
     @IBOutlet weak var courseName: UILabel!
     @IBOutlet weak var teacher: UILabel!
     @IBOutlet weak var overallAvg: UILabel!
+    @IBOutlet weak var headerImg: UIImageView!
+    @IBOutlet weak var quarterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,5 +53,19 @@ class CourseDetailTableViewController : UITableViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let screenSize = UIScreen.main.bounds.size
+        let terms = ["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let sizePicker = SelectorView.show(selections: terms, bounceUpTo: screenSize.height - headerImg.frame.height, topText: "Select Term")
+            sizePicker.completionHandler = { result in
+                self.quarterLabel.text = result
+            }
+        }
+        
     }
 }

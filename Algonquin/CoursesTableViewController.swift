@@ -14,21 +14,32 @@ class CoursesTableViewController: UITableViewController {
     var courses: [Course]?
     private var activityIndicator: UIActivityIndicatorView!
     private var errorLabel: UILabel!
+    let realm = try! Realm()
     
     struct Storyboard {
         static let courseCell = "CourseCell"
         static let showCourseDetail = "courseDetail"
     }
     
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var studentID: UILabel!
+    @IBOutlet weak var studentImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView(frame: .zero)
         self.refreshControl?.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControlEvents.valueChanged)
         
+        if realm.objects(Account.self).count == 0 {
+            self.performSegue(withIdentifier: "logInAtHome", sender: nil)
+        }
+        
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
+        
+        studentImage.layer.cornerRadius = self.studentImage.frame.size.width / 2
         
         errorLabel = UILabel()
         errorLabel.alpha = 0
@@ -37,13 +48,15 @@ class CoursesTableViewController: UITableViewController {
         errorLabel.textColor = UIColor.black
         view.addSubview(errorLabel)
         
-        getCourses()
+        if realm.objects(Account.self).count == 1 {
+            getCourses()
+        }
         self.tableView.reloadData()
         
     }
     
     func getCourses() {
-        Client.shared.parser.getSummary(userid: "xxx", password: "xxx") { summary, error in
+        Client.shared.parser.getSummary(userid: realm.objects(Account.self)[0].userid, password: realm.objects(Account.self)[0].password) { summary, error in
             guard let summary = summary else {
                 print("Error while collecting Course Summary: \(error)")
                 self.courses = [Course]()
@@ -57,9 +70,20 @@ class CoursesTableViewController: UITableViewController {
                 return
             }
             
-            self.courses = summary.courses
             
             DispatchQueue.main.async {
+                
+                self.courses = summary.courses
+                self.fullName.text = summary.student
+                self.studentID.text = "#\(summary.id!) - Grade \(summary.grade!)"
+                
+                if let pictureDecoded = UIImage(data: Utils.decodeBase64(encodedData: summary.photo!)) {
+                    
+                    self.studentImage.image = pictureDecoded
+                    self.studentImage.contentMode = .scaleAspectFill
+
+                }
+
                 self.activityIndicator.stopAnimating()
                 self.errorLabel.alpha = 0
                 self.tableView.reloadData()
