@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F431BC1E7353069D973898B /* Pods_Algonquin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EE74CAB029109A07417E17 /* Pods_Algonquin.framework */; };
+		D07BA3171F51C80C005D2EE8 /* CourseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */; };
 		D0B434E31F4E8AE400393ACE /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */; };
 		D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */; };
 		D0B434E71F4E8F9700393ACE /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B434E61F4E8F9700393ACE /* Client.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		5474BBE69EF73B89BD3E689E /* Pods-Algonquin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonquin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin.release.xcconfig"; sourceTree = "<group>"; };
+		D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailTableViewController.swift; sourceTree = "<group>"; };
 		D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		D0B434E61F4E8F9700393ACE /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B434E21F4E8AE400393ACE /* CoursesTableViewController.swift */,
+				D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				D0CC6CBA1F4E289500D43AA8 /* Course.swift in Sources */,
 				D0CC6CBD1F4E594F00D43AA8 /* Request.swift in Sources */,
+				D07BA3171F51C80C005D2EE8 /* CourseDetailTableViewController.swift in Sources */,
 				D0B434E31F4E8AE400393ACE /* CoursesTableViewController.swift in Sources */,
 				D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */,
 				D0CC6CB81F4E262900D43AA8 /* Summary.swift in Sources */,

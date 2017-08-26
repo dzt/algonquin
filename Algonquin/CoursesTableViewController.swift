@@ -17,6 +17,7 @@ class CoursesTableViewController: UITableViewController {
     
     struct Storyboard {
         static let courseCell = "CourseCell"
+        static let showCourseDetail = "courseDetail"
     }
     
     override func viewDidLoad() {
@@ -42,9 +43,9 @@ class CoursesTableViewController: UITableViewController {
     }
     
     func getCourses() {
-        Client.shared.parser.getSummary { summary, error in
+        Client.shared.parser.getSummary(userid: "xxx", password: "xxx") { summary, error in
             guard let summary = summary else {
-                print("lol \(error)")
+                print("Error while collecting Course Summary: \(error)")
                 self.courses = [Course]()
                 self.tableView.reloadData()
                 self.errorLabel.alpha = 1
@@ -103,4 +104,21 @@ extension CoursesTableViewController {
         
         return cell
     }
+}
+
+extension CoursesTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Storyboard.showCourseDetail, sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Storyboard.showCourseDetail {
+            if let dropDetailTVC = segue.destination as? CourseDetailTableViewController {
+                let selectedCourse = self.courses?[(sender as! IndexPath).row]
+                dropDetailTVC.course = selectedCourse
+            }
+        }
+    }
+    
 }
