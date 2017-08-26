@@ -1,5 +1,5 @@
 # algonquin
-I want to check my grades without looking at something so ugly. A lot of the magic is done by [this]() "kinda" poorly written server code, but it works at least ¯\_(ツ)_/¯.
+I want to check my grades without looking at something so ugly. A lot of the magic is done by [this](https://github.com/dzt/algonquin-server) "kinda" poorly written server code, but it works at least ¯\_(ツ)_/¯.
 
 ![iphone1](http://i.imgur.com/slV4O28.png)
 
