@@ -83,7 +83,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="CourseCell" rowHeight="95" id="wyM-AW-2Uf" customClass="CoursesTableViewCell" customModule="Algonquin" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="CourseCell" rowHeight="95" id="wyM-AW-2Uf" customClass="CoursesTableViewCell" customModule="Algonquin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="115" width="375" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wyM-AW-2Uf" id="c6e-ad-tSa">
