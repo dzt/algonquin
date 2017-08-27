@@ -56,8 +56,9 @@ class CoursesTableViewController: UITableViewController, ScrollUpController {
     }
     
     func scrollUp() {
-        let indexPath = NSIndexPath(row: 0, section: 0)
-        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        //let indexPath = NSIndexPath(row: 0, section: 0)
+        //self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
+        self.tableView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
     }
     
     func getCourses() {
