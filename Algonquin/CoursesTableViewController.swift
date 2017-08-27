@@ -124,7 +124,6 @@ extension CoursesTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.courseCell, for: indexPath) as! CoursesTableViewCell
         
         cell.course = self.courses?[indexPath.row]
-        cell.selectionStyle = .none
         
         return cell
     }

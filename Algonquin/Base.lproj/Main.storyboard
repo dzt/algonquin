@@ -786,6 +786,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="DRV-p2-ON8"/>
                     <connections>
+                        <outlet property="versionLabel" destination="i2U-5K-YKi" id="3Nt-ny-N0F"/>
                         <segue destination="w7E-wq-tqv" kind="presentation" identifier="signOut" id="NIt-YV-aLw"/>
                     </connections>
                 </tableViewController>
@@ -795,7 +796,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avi" width="640" height="640"/>
+        <image name="avi" width="410" height="410"/>
         <image name="blur" width="1280" height="720"/>
         <image name="cog-icon" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>

@@ -16,8 +16,12 @@ class SettingsTableViewController : UITableViewController, MFMailComposeViewCont
     
     let realm = try! Realm()
     
+    @IBOutlet weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        versionLabel.text = "\(Bundle.main.releaseVersionNumber!) (\(Bundle.main.buildVersionNumber!))"
     
     }
     
@@ -58,9 +62,9 @@ class SettingsTableViewController : UITableViewController, MFMailComposeViewCont
         } else if indexPath.section == 1 && indexPath.row == 0 {
             print("Version")
         } else if indexPath.section == 1 && indexPath.row == 1 {
-            print("Acknowledgments")
+            openURL("https://gist.githubusercontent.com/dzt/8759e669bbe5d8733c7fd723ac8abfba/raw/fe5bde830d0c5eee27fb9735a593dadff34a8caf/acknowledgements")
         } else {
-            openTwitter("pxtvr")
+            openURL("https://keybase.io/pxtvr")
         }
     }
     
@@ -85,5 +89,14 @@ class SettingsTableViewController : UITableViewController, MFMailComposeViewCont
         
         controller.dismiss(animated: true, completion: nil)
         
+    }
+}
+
+extension Bundle {
+    var releaseVersionNumber: String? {
+        return infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    var buildVersionNumber: String? {
+        return infoDictionary?["CFBundleVersion"] as? String
     }
 }
