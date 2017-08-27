@@ -549,10 +549,10 @@
             </objects>
             <point key="canvasLocation" x="430" y="-90"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Scroll Up Tab Bar Controller-->
         <scene sceneID="JcI-zf-QQl">
             <objects>
-                <tabBarController id="4qn-75-QTE" sceneMemberID="viewController">
+                <tabBarController id="4qn-75-QTE" customClass="ScrollUpTabBarController" customModule="Algonquin" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nDl-Dn-jwE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Rb5-o4-Osv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
