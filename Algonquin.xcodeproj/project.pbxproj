@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F431BC1E7353069D973898B /* Pods_Algonquin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EE74CAB029109A07417E17 /* Pods_Algonquin.framework */; };
+		D01B47EE1F5272930063535B /* ScrollUpTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B47ED1F5272930063535B /* ScrollUpTabBarController.swift */; };
 		D07BA3171F51C80C005D2EE8 /* CourseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */; };
 		D07BA3191F51DD36005D2EE8 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BA3181F51DD36005D2EE8 /* SelectorView.swift */; };
 		D07BA31B1F51ED51005D2EE8 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BA31A1F51ED51005D2EE8 /* LoginTableViewController.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5474BBE69EF73B89BD3E689E /* Pods-Algonquin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonquin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin.release.xcconfig"; sourceTree = "<group>"; };
+		D01B47ED1F5272930063535B /* ScrollUpTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollUpTabBarController.swift; sourceTree = "<group>"; };
 		D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailTableViewController.swift; sourceTree = "<group>"; };
 		D07BA3181F51DD36005D2EE8 /* SelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		D07BA31A1F51ED51005D2EE8 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				D07BA3161F51C80C005D2EE8 /* CourseDetailTableViewController.swift */,
 				D07BA31A1F51ED51005D2EE8 /* LoginTableViewController.swift */,
 				D07BA31E1F51F9D1005D2EE8 /* SettingsTableViewController.swift */,
+				D01B47ED1F5272930063535B /* ScrollUpTabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 				TargetAttributes = {
 					D0CC6CA01F4E248D00D43AA8 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = F62D38X3Q2;
+						DevelopmentTeam = W2QUR522U5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -307,6 +310,7 @@
 				D07BA31B1F51ED51005D2EE8 /* LoginTableViewController.swift in Sources */,
 				D07BA31D1F51F55C005D2EE8 /* Account.swift in Sources */,
 				D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */,
+				D01B47EE1F5272930063535B /* ScrollUpTabBarController.swift in Sources */,
 				D0CC6CB81F4E262900D43AA8 /* Summary.swift in Sources */,
 				D0CC6CA51F4E248D00D43AA8 /* AppDelegate.swift in Sources */,
 				D0CC6CC11F4E5A1B00D43AA8 /* ParserRoutes.swift in Sources */,
@@ -435,11 +439,11 @@
 			baseConfigurationReference = F9152AF7EA69329883C7D229 /* Pods-Algonquin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F62D38X3Q2;
+				DEVELOPMENT_TEAM = W2QUR522U5;
 				INFOPLIST_FILE = Algonquin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.petersoboyejo.Algonquin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petersoboyejo.gonk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -450,11 +454,11 @@
 			baseConfigurationReference = 5474BBE69EF73B89BD3E689E /* Pods-Algonquin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F62D38X3Q2;
+				DEVELOPMENT_TEAM = W2QUR522U5;
 				INFOPLIST_FILE = Algonquin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.petersoboyejo.Algonquin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petersoboyejo.gonk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

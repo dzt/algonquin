@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class CoursesTableViewController: UITableViewController {
+class CoursesTableViewController: UITableViewController, ScrollUpController {
     
     var courses: [Course]?
     private var activityIndicator: UIActivityIndicatorView!
@@ -53,6 +53,11 @@ class CoursesTableViewController: UITableViewController {
         }
         self.tableView.reloadData()
         
+    }
+    
+    func scrollUp() {
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
     
     func getCourses() {
