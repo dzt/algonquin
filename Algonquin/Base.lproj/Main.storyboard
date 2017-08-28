@@ -60,6 +60,10 @@
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avi" translatesAutoresizingMaskIntoConstraints="NO" id="cdI-yT-se5">
                                     <rect key="frame" x="23" y="16" width="55" height="55"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="55" id="GUr-1V-8dK"/>
+                                        <constraint firstAttribute="width" constant="55" id="vjM-YV-7ke"/>
+                                    </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -437,6 +441,7 @@
                                                 <constraint firstItem="ciJ-88-jJP" firstAttribute="leading" secondItem="cLq-VS-dMc" secondAttribute="trailing" constant="42" id="GkB-ZX-CSo"/>
                                                 <constraint firstItem="cLq-VS-dMc" firstAttribute="leading" secondItem="tfm-7T-dlj" secondAttribute="leadingMargin" constant="5" id="TqX-qB-Q8r"/>
                                                 <constraint firstItem="cLq-VS-dMc" firstAttribute="baseline" secondItem="ciJ-88-jJP" secondAttribute="baseline" id="WtK-cD-Oxa"/>
+                                                <constraint firstItem="cLq-VS-dMc" firstAttribute="leading" secondItem="tfm-7T-dlj" secondAttribute="leadingMargin" constant="5" id="c9O-1m-dP0"/>
                                                 <constraint firstItem="ciJ-88-jJP" firstAttribute="trailing" secondItem="tfm-7T-dlj" secondAttribute="trailingMargin" id="pbC-YG-lBt"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -466,6 +471,7 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="KA7-1L-thM" firstAttribute="leading" secondItem="iKI-GS-6ab" secondAttribute="leadingMargin" constant="6" id="Uca-9O-qRh"/>
                                                 <constraint firstItem="Z6w-Y2-g88" firstAttribute="centerY" secondItem="iKI-GS-6ab" secondAttribute="centerY" id="WAy-Tu-8t3"/>
                                                 <constraint firstItem="Z6w-Y2-g88" firstAttribute="trailing" secondItem="iKI-GS-6ab" secondAttribute="trailingMargin" id="ae2-mz-a10"/>
                                                 <constraint firstItem="Z6w-Y2-g88" firstAttribute="baseline" secondItem="KA7-1L-thM" secondAttribute="baseline" id="gib-Wj-OyU"/>
