@@ -5,6 +5,7 @@ target 'Algonquin' do
   pod 'SwiftyJSON'
   pod 'SVProgressHUD'
   pod 'RealmSwift'
+  pod 'TwitterKit'
 end
 
 post_install do |installer|

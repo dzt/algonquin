@@ -27,6 +27,9 @@
 		D0CC6CBA1F4E289500D43AA8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CB91F4E289500D43AA8 /* Course.swift */; };
 		D0CC6CBD1F4E594F00D43AA8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CBC1F4E594F00D43AA8 /* Request.swift */; };
 		D0CC6CC11F4E5A1B00D43AA8 /* ParserRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CC6CC01F4E5A1B00D43AA8 /* ParserRoutes.swift */; };
+		D0E8AE0D203269AE00C34CBF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8AE0C203269AE00C34CBF /* NavigationController.swift */; };
+		D0E8AE0F20326A6800C34CBF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8AE0E20326A6800C34CBF /* Colors.swift */; };
+		D0E8AE112032704D00C34CBF /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8AE102032704D00C34CBF /* SocialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		D0CC6CB91F4E289500D43AA8 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		D0CC6CBC1F4E594F00D43AA8 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D0CC6CC01F4E5A1B00D43AA8 /* ParserRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserRoutes.swift; sourceTree = "<group>"; };
+		D0E8AE0C203269AE00C34CBF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D0E8AE0E20326A6800C34CBF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D0E8AE102032704D00C34CBF /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		E6EE74CAB029109A07417E17 /* Pods_Algonquin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algonquin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9152AF7EA69329883C7D229 /* Pods-Algonquin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algonquin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +99,7 @@
 				D07BA31A1F51ED51005D2EE8 /* LoginTableViewController.swift */,
 				D07BA31E1F51F9D1005D2EE8 /* SettingsTableViewController.swift */,
 				D01B47ED1F5272930063535B /* ScrollUpTabBarController.swift */,
+				D0E8AE102032704D00C34CBF /* SocialViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 			children = (
 				D0B434E41F4E8E9A00393ACE /* CoursesTableViewCell.swift */,
 				D07BA3181F51DD36005D2EE8 /* SelectorView.swift */,
+				D0E8AE0C203269AE00C34CBF /* NavigationController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				D0CC6CBB1F4E593200D43AA8 /* Networking */,
 				D0CC6CB61F4E24F900D43AA8 /* Models */,
 				D0CC6CA41F4E248D00D43AA8 /* AppDelegate.swift */,
+				D0E8AE0E20326A6800C34CBF /* Colors.swift */,
 				D07BA3231F521594005D2EE8 /* Utils.swift */,
 				D0CC6CA81F4E248D00D43AA8 /* Main.storyboard */,
 				D0CC6CAB1F4E248D00D43AA8 /* Assets.xcassets */,
@@ -242,9 +251,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -257,9 +275,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Algonquin/Pods-Algonquin-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -272,13 +294,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Algonquin-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D07BA3221F520C32005D2EE8 /* ShellScript */ = {
@@ -304,16 +329,19 @@
 				D0CC6CBA1F4E289500D43AA8 /* Course.swift in Sources */,
 				D07BA31F1F51F9D1005D2EE8 /* SettingsTableViewController.swift in Sources */,
 				D0CC6CBD1F4E594F00D43AA8 /* Request.swift in Sources */,
+				D0E8AE0F20326A6800C34CBF /* Colors.swift in Sources */,
 				D07BA3241F521594005D2EE8 /* Utils.swift in Sources */,
 				D07BA3171F51C80C005D2EE8 /* CourseDetailTableViewController.swift in Sources */,
 				D0B434E31F4E8AE400393ACE /* CoursesTableViewController.swift in Sources */,
 				D07BA31B1F51ED51005D2EE8 /* LoginTableViewController.swift in Sources */,
 				D07BA31D1F51F55C005D2EE8 /* Account.swift in Sources */,
 				D0B434E51F4E8E9A00393ACE /* CoursesTableViewCell.swift in Sources */,
+				D0E8AE0D203269AE00C34CBF /* NavigationController.swift in Sources */,
 				D01B47EE1F5272930063535B /* ScrollUpTabBarController.swift in Sources */,
 				D0CC6CB81F4E262900D43AA8 /* Summary.swift in Sources */,
 				D0CC6CA51F4E248D00D43AA8 /* AppDelegate.swift in Sources */,
 				D0CC6CC11F4E5A1B00D43AA8 /* ParserRoutes.swift in Sources */,
+				D0E8AE112032704D00C34CBF /* SocialViewController.swift in Sources */,
 				D0B434E71F4E8F9700393ACE /* Client.swift in Sources */,
 				D07BA3191F51DD36005D2EE8 /* SelectorView.swift in Sources */,
 			);

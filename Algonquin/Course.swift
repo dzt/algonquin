@@ -24,6 +24,12 @@ class Course {
         comments = json["comments"].string
         teacher = json["teacher"].string
         
+        if ("\(String(describing: json["credits"].string!))" == "") {
+            credits = "Average: Undefined"
+        } else {
+            credits = "Average: \(String(describing: json["credits"].string!))"
+        }
+        
     }
     
 }

@@ -15,6 +15,7 @@ class CoursesTableViewCell : UITableViewCell
     
     @IBOutlet weak var className: UILabel!
     @IBOutlet weak var teacher: UILabel!
+    @IBOutlet weak var gradeNumber: UILabel!
     
     var course: Course! {
         didSet {
@@ -26,6 +27,7 @@ class CoursesTableViewCell : UITableViewCell
     func updateUI() {
         className.text = course.name
         teacher.text = course.teacher
+        gradeNumber.text = course.credits
     }
     
     

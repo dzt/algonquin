@@ -40,7 +40,7 @@ class LoginTableViewController: UITableViewController{
         if userid.text == "" || password.text == "" {
             let alert = UIAlertController(title: "Whoops", message: "You cannot leave any of the fields empty.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
+                print("Ok was clicked")
             }))
             self.present(alert, animated: true, completion: nil)
             return
